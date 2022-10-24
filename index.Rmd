@@ -12,3 +12,4 @@ output:
 ## Project thoughts
 
 I am interested in exploring data on the 2016 presidential election. In particular I want to see if there is a correlation between campaign stops and the turnout of the election in the area.
+
