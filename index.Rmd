@@ -1,16 +1,11 @@
 ---
 title: "Gov 50 Final Project"
 author: "Ethan Johnstone"
-description: "My final project"
+description: "Trump Campaign Stops impact on 2016 Voter Turnout"
 output:
   distill::distill_article:
     self_contained: false
 ---
-
-## Project thoughts
-
-I am interested in exploring data on the 2016 presidential election. In particular I want to see if there is a correlation between campaign stops and the turnout of the election in the area.
-
 
 ## Proposal
 
@@ -39,10 +34,8 @@ final_data <- left_join(turnout, rally, by = c("countyname"))
 whole_data <- final_data |> select(c(1,2,3,9,11,81,82,83))
 
 whole_data[["Rally"]][is.na(whole_data[["Rally"]])] <- 0
-head(whole_data)
 
 whole_data <- whole_data |> mutate(Rally_ph = if_else(Rally == 1, "Event", "No Event"))
-
 tibble(whole_data)
 
 ```
