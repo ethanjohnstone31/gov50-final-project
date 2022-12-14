@@ -39,6 +39,7 @@ tibble(whole_data)
 My sample is comprised of county level voter turnout data compiled by the MIT Election Lab from the 2016 election. My unit of analysis is official Trump campaign stops. My explanatory variable of interest is whether Trump held a campaign stop in a county or not. The variable is coded =1 if he held a campaign stop and =0 if he did not. This independent variable is measured in expert coding and is from a list that was compiled by staffers in the 2016 Trump campaign. My outcome variable is the percent of eligible voters that cast votes. For instance if this variable was coded =56, then this would indicate that 56% of eligible voters voted in that county. If I observe higher voter turnout in counties that Trump held campaign stops in, the data would support my hypothesis. If voter turnout was unchanged or less in counties he held stops in, then the data would disprove my hypothesis.
 
 Distribution of Dependent Variable:
+
 ```{r}
 turnout_dist <- ggplot(whole_data, aes(x=turnout_perc)) +
   labs(title = "Distribution of Voter Turnout",
